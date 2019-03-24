@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0EDF4B2241A3F000AC4977 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0EDF4A2241A3F000AC4977 /* QuestionController.swift */; };
+		1B0EDF4D2241A5D700AC4977 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0EDF4C2241A5D700AC4977 /* Question.swift */; };
 		1B4BE928223F2D41009994A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4BE927223F2D41009994A7 /* AppDelegate.swift */; };
 		1B4BE92A223F2D41009994A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4BE929223F2D41009994A7 /* ViewController.swift */; };
 		1B4BE92D223F2D41009994A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4BE92B223F2D41009994A7 /* Main.storyboard */; };
 		1B4BE92F223F2D43009994A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B4BE92E223F2D43009994A7 /* Assets.xcassets */; };
 		1B4BE932223F2D43009994A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4BE930223F2D43009994A7 /* LaunchScreen.storyboard */; };
+		1B8031472242AF20008DB5A7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8031462242AF20008DB5A7 /* Category.swift */; };
+		1B88826122474C32001C801A /* questionBank.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1B88826022474C32001C801A /* questionBank.realm */; };
+		1B9CC5E1224007AE00C88FCA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9CC5E0224007AE00C88FCA /* CollectionViewCell.swift */; };
+		5072DC869013B981A3B00914 /* Pods_Bible_Trivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5312DD92C28293BE977B19E4 /* Pods_Bible_Trivia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B0EDF4A2241A3F000AC4977 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		1B0EDF4C2241A5D700AC4977 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		1B4BE924223F2D41009994A7 /* Bible Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bible Trivia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B4BE927223F2D41009994A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B4BE929223F2D41009994A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,12 @@
 		1B4BE92E223F2D43009994A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B4BE931223F2D43009994A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B4BE933223F2D43009994A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B8031462242AF20008DB5A7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1B88826022474C32001C801A /* questionBank.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = questionBank.realm; sourceTree = "<group>"; };
+		1B9CC5E0224007AE00C88FCA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5312DD92C28293BE977B19E4 /* Pods_Bible_Trivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible_Trivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A7AD5D9F228C23333DD827D /* Pods-Bible Trivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Trivia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bible Trivia/Pods-Bible Trivia.release.xcconfig"; sourceTree = "<group>"; };
+		99480CBAC145EC4753EC592F /* Pods-Bible Trivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Trivia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bible Trivia/Pods-Bible Trivia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5072DC869013B981A3B00914 /* Pods_Bible_Trivia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				1B4BE926223F2D41009994A7 /* Bible Trivia */,
 				1B4BE925223F2D41009994A7 /* Products */,
+				CCD7210534A1836FB2AD1A93 /* Pods */,
+				6D649BB2141C74F385F43525 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,60 @@
 		1B4BE926223F2D41009994A7 /* Bible Trivia */ = {
 			isa = PBXGroup;
 			children = (
-				1B4BE927223F2D41009994A7 /* AppDelegate.swift */,
-				1B4BE929223F2D41009994A7 /* ViewController.swift */,
-				1B4BE92B223F2D41009994A7 /* Main.storyboard */,
+				1B4BE939223F2EF0009994A7 /* View */,
+				1B4BE93A223F2EFC009994A7 /* Controller */,
+				1B4BE93B223F2F03009994A7 /* Model */,
 				1B4BE92E223F2D43009994A7 /* Assets.xcassets */,
+				1B88826022474C32001C801A /* questionBank.realm */,
 				1B4BE930223F2D43009994A7 /* LaunchScreen.storyboard */,
 				1B4BE933223F2D43009994A7 /* Info.plist */,
 			);
 			path = "Bible Trivia";
+			sourceTree = "<group>";
+		};
+		1B4BE939223F2EF0009994A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B4BE92B223F2D41009994A7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B4BE93A223F2EFC009994A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B4BE927223F2D41009994A7 /* AppDelegate.swift */,
+				1B4BE929223F2D41009994A7 /* ViewController.swift */,
+				1B0EDF4A2241A3F000AC4977 /* QuestionController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1B4BE93B223F2F03009994A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B9CC5E0224007AE00C88FCA /* CollectionViewCell.swift */,
+				1B0EDF4C2241A5D700AC4977 /* Question.swift */,
+				1B8031462242AF20008DB5A7 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6D649BB2141C74F385F43525 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5312DD92C28293BE977B19E4 /* Pods_Bible_Trivia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCD7210534A1836FB2AD1A93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99480CBAC145EC4753EC592F /* Pods-Bible Trivia.debug.xcconfig */,
+				7A7AD5D9F228C23333DD827D /* Pods-Bible Trivia.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B4BE936223F2D43009994A7 /* Build configuration list for PBXNativeTarget "Bible Trivia" */;
 			buildPhases = (
+				96CE20D09D7866B673B1DE23 /* [CP] Check Pods Manifest.lock */,
 				1B4BE920223F2D41009994A7 /* Sources */,
 				1B4BE921223F2D41009994A7 /* Frameworks */,
 				1B4BE922223F2D41009994A7 /* Resources */,
+				AB0CBF8D9CA7ACAEA4694BB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,11 +189,53 @@
 			files = (
 				1B4BE932223F2D43009994A7 /* LaunchScreen.storyboard in Resources */,
 				1B4BE92F223F2D43009994A7 /* Assets.xcassets in Resources */,
+				1B88826122474C32001C801A /* questionBank.realm in Resources */,
 				1B4BE92D223F2D41009994A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96CE20D09D7866B673B1DE23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bible Trivia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB0CBF8D9CA7ACAEA4694BB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bible Trivia/Pods-Bible Trivia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bible Trivia/Pods-Bible Trivia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B4BE920223F2D41009994A7 /* Sources */ = {
@@ -137,6 +244,10 @@
 			files = (
 				1B4BE92A223F2D41009994A7 /* ViewController.swift in Sources */,
 				1B4BE928223F2D41009994A7 /* AppDelegate.swift in Sources */,
+				1B9CC5E1224007AE00C88FCA /* CollectionViewCell.swift in Sources */,
+				1B0EDF4B2241A3F000AC4977 /* QuestionController.swift in Sources */,
+				1B0EDF4D2241A5D700AC4977 /* Question.swift in Sources */,
+				1B8031472242AF20008DB5A7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +391,7 @@
 		};
 		1B4BE937223F2D43009994A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99480CBAC145EC4753EC592F /* Pods-Bible Trivia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +410,7 @@
 		};
 		1B4BE938223F2D43009994A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A7AD5D9F228C23333DD827D /* Pods-Bible Trivia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

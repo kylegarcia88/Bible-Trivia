@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v5c-HV-KJp">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bible Trivia-->
+        <scene sceneID="ppa-ep-Phk">
+            <objects>
+                <viewController id="qs5-vJ-mnx" customClass="ViewController" customModule="Bible_Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="21h-7n-5c9">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hh9-Vj-BSm">
+                                <rect key="frame" x="10" y="32" width="647" height="343"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="fF3-Bx-Sb6"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="lQ4-6j-gnN">
+                                    <size key="itemSize" width="200" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="5"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="boardCell" id="kAS-kh-W3l" customClass="CollectionViewCell" customModule="Bible_Trivia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="5" width="200" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mw1-mn-TVQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Mw1-mn-TVQ" firstAttribute="leading" secondItem="kAS-kh-W3l" secondAttribute="leading" id="9bw-Cg-2jM"/>
+                                            <constraint firstItem="Mw1-mn-TVQ" firstAttribute="top" secondItem="kAS-kh-W3l" secondAttribute="top" id="Tl3-ja-DaN"/>
+                                            <constraint firstAttribute="bottom" secondItem="Mw1-mn-TVQ" secondAttribute="bottom" id="WB5-l6-rwC"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mw1-mn-TVQ" secondAttribute="trailing" id="fKl-eo-ne1"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="safeArea" id="v6g-nM-sBk"/>
+                                        <connections>
+                                            <outlet property="boardLabel" destination="Mw1-mn-TVQ" id="f27-5m-DWz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="collectionViewHeader" id="pII-PY-fee">
+                                    <rect key="frame" x="0.0" y="0.0" width="647" height="5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="qs5-vJ-mnx" id="cVp-XT-9n4"/>
+                                    <outlet property="delegate" destination="qs5-vJ-mnx" id="dBK-qb-6o0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hh9-Vj-BSm" firstAttribute="top" secondItem="L21-wi-zSc" secondAttribute="top" id="2ev-Qz-fpg"/>
+                            <constraint firstItem="L21-wi-zSc" firstAttribute="bottom" secondItem="hh9-Vj-BSm" secondAttribute="bottom" id="379-wH-qpF"/>
+                            <constraint firstItem="hh9-Vj-BSm" firstAttribute="leading" secondItem="L21-wi-zSc" secondAttribute="leading" constant="10" id="5mK-71-bKd"/>
+                            <constraint firstItem="L21-wi-zSc" firstAttribute="trailing" secondItem="hh9-Vj-BSm" secondAttribute="trailing" constant="10" id="dV3-Rk-7ku"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L21-wi-zSc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bible Trivia" id="wx8-ZZ-yv3">
+                        <barButtonItem key="rightBarButtonItem" title="Restart" id="Bi8-au-STq">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="restartButtonPressed:" destination="qs5-vJ-mnx" id="IJj-qq-r5n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="boardCollectionView" destination="hh9-Vj-BSm" id="idh-LG-FKn"/>
+                        <segue destination="8jo-Ym-EaV" kind="show" identifier="goToQuestion" id="YvS-eA-SdS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jr9-Gt-DjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457.4212893553226" y="109.59999999999999"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="hHr-C9-fo0">
+            <objects>
+                <viewController id="8jo-Ym-EaV" customClass="QuestionViewController" customModule="Bible_Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yaj-gL-xFu">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="NGW-Ei-c6P">
+                                <rect key="frame" x="5" y="37" width="657" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="uTp-w1-zcd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rbx-XK-a7G">
+                                <rect key="frame" x="5" y="205" width="657" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="ugU-1e-Lql"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf4-i9-mUw">
+                                <rect key="frame" x="250" y="259" width="167" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="View Answer"/>
+                                <connections>
+                                    <action selector="answerButtonPressed:" destination="8jo-Ym-EaV" eventType="touchUpInside" id="vxL-fx-jAb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rbx-XK-a7G" firstAttribute="trailing" secondItem="bXX-h0-Shh" secondAttribute="trailing" constant="-5" id="3Wr-Z3-o1F"/>
+                            <constraint firstItem="sf4-i9-mUw" firstAttribute="leading" secondItem="bXX-h0-Shh" secondAttribute="leading" constant="250" id="5bk-bl-KaG"/>
+                            <constraint firstItem="bXX-h0-Shh" firstAttribute="trailing" secondItem="sf4-i9-mUw" secondAttribute="trailing" constant="250" id="8k7-cp-aFT"/>
+                            <constraint firstItem="NGW-Ei-c6P" firstAttribute="top" secondItem="bXX-h0-Shh" secondAttribute="top" constant="5" id="Kvt-x3-mEM"/>
+                            <constraint firstItem="bXX-h0-Shh" firstAttribute="trailing" secondItem="NGW-Ei-c6P" secondAttribute="trailing" constant="5" id="NZO-uF-KcE"/>
+                            <constraint firstItem="Rbx-XK-a7G" firstAttribute="bottom" secondItem="bXX-h0-Shh" secondAttribute="bottom" constant="-5" id="OSm-2a-RYG"/>
+                            <constraint firstItem="sf4-i9-mUw" firstAttribute="top" secondItem="NGW-Ei-c6P" secondAttribute="bottom" constant="57" id="RmB-bx-qqb"/>
+                            <constraint firstItem="NGW-Ei-c6P" firstAttribute="leading" secondItem="bXX-h0-Shh" secondAttribute="leading" constant="5" id="XKN-Ws-iJT"/>
+                            <constraint firstItem="bXX-h0-Shh" firstAttribute="bottom" secondItem="sf4-i9-mUw" secondAttribute="bottom" constant="57" id="YK5-pC-dGX"/>
+                            <constraint firstItem="Rbx-XK-a7G" firstAttribute="leading" secondItem="bXX-h0-Shh" secondAttribute="leading" constant="5" id="nAM-n5-MX0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bXX-h0-Shh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7oB-Sv-65l"/>
+                    <connections>
+                        <outlet property="answerButton" destination="sf4-i9-mUw" id="OiD-co-Jct"/>
+                        <outlet property="answerLabel" destination="Rbx-XK-a7G" id="I1u-HD-CG7"/>
+                        <outlet property="questionLabel" destination="NGW-Ei-c6P" id="ZzZ-ID-X2Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8o-IU-g7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4269.7151424287858" y="109.59999999999999"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1SM-59-GqD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v5c-HV-KJp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="msp-GJ-FUW">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qs5-vJ-mnx" kind="relationship" relationship="rootViewController" id="I2e-4F-A2N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N5b-tO-UPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2666.7166416791606" y="109.59999999999999"/>
+        </scene>
+    </scenes>
+</document>
