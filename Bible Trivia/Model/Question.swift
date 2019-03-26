@@ -12,9 +12,13 @@ import RealmSwift
 class Question: Object {
     
     @objc dynamic var questionText : String = ""
-    @objc dynamic var answer : String = ""
+    @objc dynamic var correctAnswer : String = ""
     @objc dynamic var category : String = ""
     @objc dynamic var amount : Int = 0
+    @objc dynamic var optionA : String = ""
+    @objc dynamic var optionB : String = ""
+    @objc dynamic var optionC : String = ""
+    @objc dynamic var optionD : String = ""
     
     var parentCategory = LinkingObjects(fromType: Category.self, property: "questions")
     

@@ -54,17 +54,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     // make a cell for each cell index path
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {    
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! CollectionViewCell
-        
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         if let catagory = catagories?[indexPath.item] {
         
         cell.boardLabel?.text = catagory.name
-            
-        
         //top row a different color
         if indexPath.item < 5 {
             cell.backgroundColor = UIColor(hex: "#16a085") // make cell more visible in our example project
@@ -98,12 +94,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: - UICollectionViewDelegate protocol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       // print("You selected cell #\(indexPath.item)!")
-       // print(indexPath.row)
-        //print("selected category: \()")
+
         if  indexPath.item > 4 {
-            
-            
             if let category = catagories?[indexPath.row] {
                 if category.hasBeenSelected == false {
                     do {
@@ -115,10 +107,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     }
                     performSegue(withIdentifier: "goToQuestion", sender: self)
                 }
-               
             }
-            
-           // performSegue(withIdentifier: "goToQuestion", sender: self)
+          
         } else {
             
         }
