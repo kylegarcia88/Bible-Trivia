@@ -63,7 +63,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.boardLabel?.text = catagory.name
         //top row a different color
         if indexPath.item < 5 {
-            cell.backgroundColor = UIColor(hex: "#16a085") // make cell more visible in our example project
+            cell.backgroundColor = UIColor(hex: "#6c5ce7")
             cell.boardLabel.textColor = UIColor(hex: "#ecf0f1")
         } else {
             
@@ -77,7 +77,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 }
             }
             
-            cell.backgroundColor = UIColor(hex: "#3498db")
+            cell.backgroundColor = UIColor(hex: "#0984e3")
             cell.boardLabel.textColor = UIColor(hex: "#ecf0f1")
         }
         }
@@ -180,15 +180,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //        let itemWidth = (UIScreen.main.bounds.width-20)/5
 //        let itemHeight = (UIScreen.main.bounds.height - 20)/5
         
-        let itemWidth = (self.boardCollectionView.frame.size.width-5)/5
-        let itemHeight = (self.boardCollectionView.frame.size.height-12)/6
+        let itemWidth = (self.boardCollectionView.frame.width-12)/5
+        let itemHeight = (self.boardCollectionView.frame.height-14)/6
         
         let layout = self.boardCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
-        layout.sectionInset = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 1,left: 1,bottom: 1,right: 1)
         layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
-        layout.minimumInteritemSpacing = 1
-        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 2
+        layout.minimumLineSpacing = 2
         
         boardCollectionView.collectionViewLayout = layout
     }
