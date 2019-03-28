@@ -16,7 +16,8 @@
 		1B4BE932223F2D43009994A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B4BE930223F2D43009994A7 /* LaunchScreen.storyboard */; };
 		1B8031472242AF20008DB5A7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8031462242AF20008DB5A7 /* Category.swift */; };
 		1B9CC5E1224007AE00C88FCA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9CC5E0224007AE00C88FCA /* CollectionViewCell.swift */; };
-		1BE14FB32249409200A7FDEE /* questionBank.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1BE14FB22249408600A7FDEE /* questionBank.realm */; };
+		1BD6BB10224D3D7100C2EB30 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD6BB0F224D3D7100C2EB30 /* RealmConfig.swift */; };
+		1BD6BB16224D77F400C2EB30 /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1BD6BB15224D77F400C2EB30 /* default.realm */; };
 		5072DC869013B981A3B00914 /* Pods_Bible_Trivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5312DD92C28293BE977B19E4 /* Pods_Bible_Trivia.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +33,8 @@
 		1B4BE933223F2D43009994A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B8031462242AF20008DB5A7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		1B9CC5E0224007AE00C88FCA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		1BE14FB22249408600A7FDEE /* questionBank.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = questionBank.realm; sourceTree = "<group>"; };
+		1BD6BB0F224D3D7100C2EB30 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
+		1BD6BB15224D77F400C2EB30 /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
 		5312DD92C28293BE977B19E4 /* Pods_Bible_Trivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible_Trivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7AD5D9F228C23333DD827D /* Pods-Bible Trivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Trivia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bible Trivia/Pods-Bible Trivia.release.xcconfig"; sourceTree = "<group>"; };
 		99480CBAC145EC4753EC592F /* Pods-Bible Trivia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Trivia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bible Trivia/Pods-Bible Trivia.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +77,7 @@
 				1B4BE93A223F2EFC009994A7 /* Controller */,
 				1B4BE93B223F2F03009994A7 /* Model */,
 				1B4BE92E223F2D43009994A7 /* Assets.xcassets */,
-				1BE14FB22249408600A7FDEE /* questionBank.realm */,
+				1BD6BB15224D77F400C2EB30 /* default.realm */,
 				1B4BE930223F2D43009994A7 /* LaunchScreen.storyboard */,
 				1B4BE933223F2D43009994A7 /* Info.plist */,
 			);
@@ -106,6 +108,7 @@
 				1B9CC5E0224007AE00C88FCA /* CollectionViewCell.swift */,
 				1B0EDF4C2241A5D700AC4977 /* Question.swift */,
 				1B8031462242AF20008DB5A7 /* Category.swift */,
+				1BD6BB0F224D3D7100C2EB30 /* RealmConfig.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				TargetAttributes = {
 					1B4BE923223F2D41009994A7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -187,8 +191,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE14FB32249409200A7FDEE /* questionBank.realm in Resources */,
 				1B4BE932223F2D43009994A7 /* LaunchScreen.storyboard in Resources */,
+				1BD6BB16224D77F400C2EB30 /* default.realm in Resources */,
 				1B4BE92F223F2D43009994A7 /* Assets.xcassets in Resources */,
 				1B4BE92D223F2D41009994A7 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BD6BB10224D3D7100C2EB30 /* RealmConfig.swift in Sources */,
 				1B4BE92A223F2D41009994A7 /* ViewController.swift in Sources */,
 				1B4BE928223F2D41009994A7 /* AppDelegate.swift in Sources */,
 				1B9CC5E1224007AE00C88FCA /* CollectionViewCell.swift in Sources */,
@@ -403,7 +408,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kylegarcia.Bible-Trivia";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -422,7 +427,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kylegarcia.Bible-Trivia";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

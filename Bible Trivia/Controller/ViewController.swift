@@ -11,8 +11,10 @@ import RealmSwift
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    let realm = try! Realm()
-    var catagories : Results<Category>?
+    
+    var catagories : Results<Category>!
+    
+    
     
 
     @IBOutlet weak var boardCollectionView: UICollectionView!
@@ -23,10 +25,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     let reuseIdentifier = "boardCell"
     //var catagories = ["The Disciples", "Old Testament", "New Testament", "Heroes", "Jesus", "100", "100", "100", "100", "100", "200", "200", "200", "200", "200", "300", "300", "300", "300", "300", "400", "400", "400", "400", "400", "500", "500","500","500","500"]
     
-
+    let realm = try! Realm()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //realm file path
+        print (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
+        
+    
         
         boardCollectionView.dataSource = self
         boardCollectionView.delegate = self
@@ -39,8 +47,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //load data
         loadCatagories()
         
-        //realm file path
-        print (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        
         
         
     }
@@ -108,9 +115,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     performSegue(withIdentifier: "goToQuestion", sender: self)
                 }
             }
-          
+
         } else {
-            
+
         }
         
     }
@@ -138,18 +145,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+
        let destinationVC = segue.destination as! QuestionViewController
-        
+
         if let indexPath = boardCollectionView.indexPathsForSelectedItems?.first{
-            
+
             //print ("Selected Index Path:\(indexPath) ")
             //print(indexPath.row)
             destinationVC.selectedCategory = catagories?[indexPath.row]
             print("Data being passed: \(destinationVC.selectedCategory!)")
-            
+
         }
-        
+
     }
     
     //MARK: - Restart Button Pressed

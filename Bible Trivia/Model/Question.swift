@@ -20,7 +20,7 @@ class Question: Object {
     @objc dynamic var optionC : String = ""
     @objc dynamic var optionD : String = ""
     
-    var parentCategory = LinkingObjects(fromType: Category.self, property: "questions")
+    //var parentCategory = LinkingObjects(fromType: Category.self, property: "questions")
     
 //    let questionText : String
 //    let answer : String

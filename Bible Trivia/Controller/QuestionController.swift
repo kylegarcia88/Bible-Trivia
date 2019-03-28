@@ -27,7 +27,7 @@ class QuestionViewController: UIViewController {
     var pickedAnswer : String = ""
     var score : Int = 0
     
-    let realm = try! Realm()
+    let realm = try! Realm(configuration: RealmConfig.main.configuration)
     
     var selectedCategory : Category? {
         didSet{

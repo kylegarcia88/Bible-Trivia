@@ -16,6 +16,6 @@ class Category: Object {
     @objc dynamic var categorySelected : String = ""
     @objc dynamic var hasBeenSelected : Bool = false
     
-    let questions = List<Question>()
+    //let questions = List<Question>()
     
 }
