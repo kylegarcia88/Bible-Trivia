@@ -15,22 +15,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
        
+        let defaultURL = Realm.Configuration.defaultConfiguration.fileURL!
+        
+        if let v0URL = bundleURL("default-v1") {
+            do {
+                try FileManager.default.removeItem(at: defaultURL)
+                try FileManager.default.copyItem(at: v0URL, to: defaultURL)
+            } catch {}
+        }
+        
         openRealm()
+        
+      
         
         return true
     }
     func openRealm() {
         
-        let defaultRealmPath = Realm.Configuration.defaultConfiguration.fileURL!
-        let bundleReamPath = defaultRealmPath.deletingLastPathComponent().appendingPathComponent("default.realm")
-        
-        if !FileManager.default.fileExists(atPath: defaultRealmPath.absoluteString) {
+        if let v1URL = bundleURL("default-v1"){
+            
+            let defaultURL = Realm.Configuration.defaultConfiguration.fileURL!
+            let defaultParentURL = defaultURL.deletingLastPathComponent()
+            
+            let realmv1URL = defaultParentURL.appendingPathComponent("default-v1.realm")
+            
+            let realmv1Configuration = Realm.Configuration(fileURL: realmv1URL, schemaVersion: 1)
+            
+            
+            do {
+                try FileManager.default.removeItem(at: realmv1URL)
+                try FileManager.default.copyItem(at: v1URL, to: realmv1URL)
                 
-                try! FileManager.default.copyItem(at: bundleReamPath, to: defaultRealmPath)
+            } catch {}
+            
+            // migrate realms at realmv1Path manually, realmv2Path is migrated automatically on access
+            try! Realm.performMigration(for: realmv1Configuration)
+        
         }
         
     }
+    func bundleURL(_ name: String) -> URL? {
+        return Bundle.main.url(forResource: name, withExtension: "realm")
+    }
+    
+    
+    
+    
 }
 

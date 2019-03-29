@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     let reuseIdentifier = "boardCell"
     //var catagories = ["The Disciples", "Old Testament", "New Testament", "Heroes", "Jesus", "100", "100", "100", "100", "100", "200", "200", "200", "200", "200", "300", "300", "300", "300", "300", "400", "400", "400", "400", "400", "500", "500","500","500","500"]
     
-    let realm = try! Realm()
+    lazy var realm = try! Realm()
     
     
     override func viewDidLoad() {
